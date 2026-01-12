@@ -5,8 +5,7 @@ export default defineConfig({
   title: 'やすおのブログ',
   description: '住まいの修繕の仕事と日々の経験を綴ります',
   lang: 'ja-JP',
-  base: '/yasuo-blog/',
-  
+
   themeConfig: {
     // サイトロゴ（オプション）
     // logo: '/logo.png',
