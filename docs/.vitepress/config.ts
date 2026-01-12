@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/yasuo-blog/',
   title: 'やすおのブログ',
   description: '住まいの修繕の仕事と日々の経験を綴ります',
   lang: 'ja-JP',
@@ -48,8 +49,8 @@ export default defineConfig({
 
     // フッター（オプション）
     footer: {
-      message: 'Released under the MIT License',
-      copyright: 'Copyright © 2025 やすおのブログ'
+      message: 'MIT License',
+      copyright: 'Copyright © 2026 tanakayasuo'
     }
   }
 })
