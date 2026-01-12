@@ -72,8 +72,6 @@ date: 2025-12-11
 
 [リンク](https://example.com)
 
-![画像](./image.jpg)
-
 > 引用文
 
 | 列1 | 列2 |
@@ -83,10 +81,11 @@ date: 2025-12-11
 
 ### 4. 画像の挿入
 
-画像は `docs/` 配下の好きなフォルダに配置。相対パスで参照：
-```markdown
-![修繕の様子](./articles/images/repair-photo.jpg)
-```
+画像は `docs/` 配下の好きなフォルダに配置。相対パスで参照。
+
+構文：感嘆符 + 角括弧で代替テキスト + 丸括弧で画像パス
+
+例：`docs/articles/images/` フォルダに `photo.jpg` を配置した場合、記事から `/articles/images/photo.jpg` で参照できます。
 
 ## サイト設定
 
