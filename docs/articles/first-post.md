@@ -59,6 +59,11 @@ console.log('Hello World');
 1. `docs/articles/` フォルダに `.md` ファイルを作成
 2. VS Code で Markdown を書く
 3. ブラウザで確認するには：`npm run dev`
-4. 本番公開するには：`npm run build` → `dist/` フォルダの内容をFC2にアップロード
+4. 本番公開するには：
+   - `npm run build` を実行して `dist/` フォルダを生成します
+   - `dist/` を GitHub Pages にデプロイします（例）
+     - `gh-pages` ブランチへ `dist/` の中身を push する
+     - または GitHub Actions（例: peaceiris/actions-gh-pages）を使って自動デプロイする
+   - GitHub Pages をプロジェクトページで使う場合、`docs/.vitepress/config.ts` の `base` を `/yasuo-blog/` に設定してください（画像やリンクのパスに注意）
 
 詳しくは[ガイド](../guide/)を参照してください。
