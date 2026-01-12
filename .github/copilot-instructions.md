@@ -85,7 +85,7 @@ date: 2025-12-11
 
 構文：感嘆符 + 角括弧で代替テキスト + 丸括弧で画像パス
 
-例：`docs/articles/images/` フォルダに `photo.jpg` を配置した場合、記事から `/articles/images/photo.jpg` で参照できます。
+例：`docs/articles/images/` フォルダに画像を配置した場合、記事からは絶対パス形式で参照します。
 
 ## サイト設定
 
