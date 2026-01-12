@@ -172,7 +172,7 @@ sidebar: {
 | `npm: 用語が認識されない` | PowerShell実行ポリシー | `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` |
 | 記事がサイトに表示されない | Front Matter形式エラー | YAML形式を確認（タイムをチェック）|
 | ビルドエラー | 依存パッケージ破損 | `rm -r node_modules && npm install` |
-| ローカル画像が表示されない | パス間違い | 相対パス確認：`./articles/image.jpg` |
+| ローカル画像が表示されない | パス間違い | 画像パスを確認（絶対パスを推奨） |
 
 ## 開発のベストプラクティス
 
