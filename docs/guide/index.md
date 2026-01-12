@@ -15,13 +15,13 @@ Markdown ファイルを保存すると、自動的にブラウザに反映さ�
 
 ## 本番用ファイルを生成
 
-FC2にアップロードするための静的HTML・CSSを生成します：
+GitHub Pagesに公開するための静的HTML・CSSを生成します：
 
 ```bash
 npm run build
 ```
 
-実行後、`dist/` フォルダが作成されます。このフォルダ内のすべてのファイルをFC2にアップロードしてください。
+実行後、`dist/` フォルダが作成されます。GitHub Pagesへの公開はGitHub Actionsが自動的に行います。
 
 ## ファイル構成
 
@@ -121,13 +121,13 @@ npm run dev
 
 または記事一覧ページ（`docs/articles/index.md`）を手動で更新してください。
 
-## FC2 へのアップロード方法
+## GitHub Pages への公開方法
 
-1. `npm run build` を実行
-2. `dist/` フォルダが作成される
-3. FTP ソフト（WinSCP、FileZilla など）で FC2 へ接続
-4. `dist/` フォルダ内のすべてのファイルをアップロード
-5. FC2 で公開設定を確認
+1. 記事を作成・編集
+2. 変更をコミット：`git add .` → `git commit -m "記事追加"`
+3. GitHubにプッシュ：`git push origin main`
+4. GitHub Actionsが自動的にビルド＆デプロイ
+5. 数分後にサイトが更新されます
 
 ## さらに詳しく
 

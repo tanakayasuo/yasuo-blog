@@ -2,7 +2,7 @@
 
 ## プロジェクト概要
 
-修繕ブログサイト。**VitePress** (Vue + Vite) でMarkdownから静的HTMLを生成し、FC2ホームページにアップロードして公開。VS Codeで記事を書き、CLI で本番ファイルを生成するワークフロー。
+修繕ブログサイト。**VitePress** (Vue + Vite) でMarkdownから静的HTMLを生成し、GitHub Pagesで公開。VS Codeで記事を書き、CLI で本番ファイルを生成するワークフロー。
 
 ## ファイル構成
 
@@ -29,7 +29,7 @@
 | コマンド | 用途 | 説明 |
 |---------|------|------|
 | `npm run dev` | 開発・プレビュー | `http://localhost:5173` でブラウザ表示。Markdownの変更が自動反映 |
-| `npm run build` | 本番ファイル生成 | `dist/` フォルダに静的HTML・CSS出力。FC2にこれをアップロード |
+| `npm run build` | 本番ファイル生成 | `dist/` フォルダに静的HTML・CSS出力。GitHub Pagesに自動デプロイ |
 | `npm run serve` | 本番プレビュー | ビルド後、本番環境を確認 |
 
 ## 記事の書き方
@@ -116,26 +116,27 @@ nav: [
 ]
 ```
 
-## デプロイ（FC2へのアップロード）
+## デプロイ（GitHub Pagesへの公開）
 
-### 1. 本番ファイルを生成
+### 1. 変更をコミット
 
 ```bash
-npm run build
+git add .
+git commit -m "記事を追加"
 ```
 
-実行後 `dist/` フォルダが作成される。
+### 2. GitHubにプッシュ
 
-### 2. FTP でアップロード
+```bash
+git push origin main
+```
 
-推奨FTPツール：
-- **WinSCP** (無料、Windows向け)
-- **FileZilla** (クロスプラットフォーム)
+### 3. 自動デプロイ
 
-### 3. FC2 設定
-
-- FC2コントロールパネルで公開先を `dist/` の出力先に設定
-- インデックスファイルを `index.html` に指定
+GitHub Actionsが自動的に以下を実行します：
+- `npm run build` で本番ファイルを生成
+- `dist/` フォルダをGitHub Pagesにデプロイ
+- 数分後にサイトが更新されます
 
 ## プロジェクト設定・カスタマイズ
 
@@ -185,7 +186,7 @@ sidebar: {
 
 - [VitePress 公式ドキュメント](https://vitepress.vuejs.org/)
 - [Markdown チートシート](https://www.markdownguide.org/cheat-sheet/)
-- [FC2ホームページ ヘルプ](https://help.fc2.com/)
+- [GitHub Pages ドキュメント](https://docs.github.com/ja/pages)
 
 ---
 
